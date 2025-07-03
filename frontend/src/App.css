@@ -1,0 +1,58 @@
+/* 1) Reset (preflight) */
+@import "tailwindcss/preflight";
+
+/* 2) Utilities 레이어 */
+@import "tailwindcss/utilities";
+
+/* ────────────────────────────────────────────── */
+/* 3) (선택) Tailwind 공식 플러그인 CSS 불러오기 */
+/* forms, typography, line-clamp 같은 플러그인을 쓴다면: */
+@import "tailwindcss/forms/base";
+/* @import "tailwindcss/typography/base"; */
+/* @import "tailwindcss/line-clamp/base"; */
+
+/* ────────────────────────────────────────────── */
+/* 4) 사용자 정의 컴포넌트(@layer components) */
+@layer components {
+  .logo {
+    @apply h-24 p-6 transition-filter duration-300 will-change-filter;
+  }
+  .logo:hover {
+    @apply drop-shadow-[0_0_2em_rgba(100,108,255,0.67)];
+  }
+  .logo.react:hover {
+    @apply drop-shadow-[0_0_2em_rgba(97,218,251,0.67)];
+  }
+
+  .card {
+    @apply p-8 bg-white rounded-xl shadow-md;
+  }
+
+  .read-the-docs {
+    @apply text-gray-500;
+  }
+}
+
+/* ────────────────────────────────────────────── */
+/* 5) 사용자 정의 유틸(@layer utilities) */
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 20s linear infinite;
+  }
+}
+
+/* ────────────────────────────────────────────── */
+/* 6) CSS 변수 테마 정의 유지 */
+:root { /* … */ }
+.dark  { /* … */ }
+
+/* ────────────────────────────────────────────── */
+/* 7) 글로벌 베이스 스타일(@layer base) */
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+}

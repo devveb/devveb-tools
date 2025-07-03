@@ -1,0 +1,4 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+@layer components { /* custom styles */ }
+@layer utilities { /* custom utils */ }
