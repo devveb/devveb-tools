@@ -19,4 +19,4 @@ COPY --from=builder /home/gradle/build/libs/*.jar app.jar
 ENV SPRING_PROFILES_ACTIVE=render
 
 # 실제 실행 명령어
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.jar", "--spring.profiles.active=render"]
