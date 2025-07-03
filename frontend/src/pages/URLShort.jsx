@@ -9,7 +9,7 @@ export default function URLShort() {
     const handleShorten = async () => {
         setError('')
         try {
-            const response = await axios.post('https://tool-backend.onrender.com/urlshrtn/shrnk', {
+            const response = await axios.post('https://devveb-tools.onrender.com/urlshrtn/shrnk', {
                 originalUrl: originalUrl,
             })
             setShortUrl(response.data.shortUrl || '')
