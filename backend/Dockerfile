@@ -2,7 +2,7 @@
 FROM gradle:8.5.0-jdk17 AS builder
 
 # 캐시 최적화를 위한 의존성 복사
-COPY build.gradle.kts settings.gradle.kts ./
+COPY build.gradle settings.gradle ./
 COPY gradle ./gradle
 RUN gradle --no-daemon dependencies
 
