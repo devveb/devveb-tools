@@ -1,10 +1,9 @@
 spring:
-  spring:
-    datasource:
-      url: jdbc:postgresql://dpg-d1j86i6r433s73803q60-a/tool_jt8n
-      username: dvvb
-      password: amm33mcFMrPBDeHCtayEUEYT5HpsOjXB
-      driver-class-name: org.postgresql.Driver
+  datasource:
+    url: jdbc:postgresql://dpg-d1j86i6r433s73803q60-a/tool_jt8n
+    username: dvvb
+    password: amm33mcFMrPBDeHCtayEUEYT5HpsOjXB
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
