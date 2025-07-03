@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("urlshrtn")
+@RequestMapping("/urlshrtn")
 public class UrlController {
 
     UrlService urlService;
